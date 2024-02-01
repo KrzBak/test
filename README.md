@@ -161,3 +161,21 @@ for line in lines:
             non_starting_upper_words.append(word)
 print("Liczba wyrazów zaczynających się wielką literą, które nie są początkiem wiersza:", len(non_starting_upper_words))
 
+#%%
+def zgadywanka():
+    liczba = random.randint(1, 100)  
+    proba = 0
+
+    while True:
+        proba += 1
+        odgadnij = int(input("Podaj liczbe: "))
+        if odgadnij < liczba:
+            print("Za mało")
+        elif odgadnij > liczba:
+            print("Za dużo")
+        else:
+            print(f"Odgadłeś liczbę {liczba} w {proba} próbach.")
+            break
+if __name__ == "__main__":
+    zgadywanka()
+
